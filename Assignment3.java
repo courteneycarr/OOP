@@ -130,15 +130,15 @@ public class Assignment3 {
 
    public static boolean dataStructures(String input){
        ArrayStack stack =new ArrayStack();
-       ArrayQueue queue = new ArrayQueue();
+       ArrayQueue q = new ArrayQueue();
 
        for(int i=0;i<input.length();i++) {
            char c = input.charAt(i);
            stack.push(c);
-           queue.enqueue(c);
+           q.enqueue(c);
        }
        for(int i=0;i<input.length();i++){
-           if (stack.pop() == queue.dequeue()) {
+           if (stack.pop() == q.dequeue()) {
                status = true;
 
            } else {
